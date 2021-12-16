@@ -5,15 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>dCash</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-sky-400">
-    <h1 class="font-bold text-white text-center text-6xl mt-6">dCash.</h1>
-    <div class="card-container container">
-      <div class="card bg-sky-200">
-        <p>Diposit</p>
+  <body style="background-color: #21adfb">
+    <h1 class="fw-bold text-center text-light my-5">dCash.</h1>
+    <main class="container-fluid">
+      <div class="row d-flex justify-content-center gap-4">
+        <div class="card col-md-4 col-lg-4">
+          <button>Diposit</button>
+          <span class="fw-bold ms-auto p-3">$500.00</span>
+        </div>
+        <div class="card col-md-4 col-lg-4">
+          <button>Withdraw</button>
+          <span class="fw-bold ms-auto p-3 text-danger">$500.00</span>
+        </div>
+        <div class="card col-md-4 col-lg-4">
+          <button>Balance</button>
+          <span class="fw-bold ms-auto p-3">$500.00</span>
+        </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>
