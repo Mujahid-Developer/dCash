@@ -25,3 +25,36 @@ h1 {
   color: #01be14;
   font-size: 2.5rem;
 }
+input {
+  width: auto;
+  height: 66px;
+  background-color: #bae6ff;
+  border: none;
+  border-radius: 10px;
+}
+
+.card-input {
+  background-color: #ffffff;
+  max-width: 570px;
+  border-radius: 20px;
+}
+
+.card-input button {
+  background-color: #21adfb;
+  border: none;
+  border-radius: 10px;
+  width: 145px;
+  height: 66px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+}
+/* .card-input button:hover {
+  background-color: #018bd6;
+} */
+
+.card-input button:active {
+  box-shadow: 0 2px rgb(204, 204, 204);
+  transform: translateY(1px);
+}
