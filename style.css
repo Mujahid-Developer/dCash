@@ -5,6 +5,9 @@ body {
 h1 {
   font-size: 3.5rem;
 }
+.auth-alert {
+  display: none;
+}
 .card {
   background-color: #ffffff;
   max-width: 400px;

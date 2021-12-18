@@ -5,7 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>dCash</title>
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CDN -->
+    <style>
+      .auth-alert {
+        display: none;
+      }
+    </style>
   </head>
   <body class="bg-sky-400">
     <h1 class="font-bold text-white text-center text-6xl mt-6">dCash.</h1>
@@ -43,6 +50,7 @@
                   name="email"
                   id="email"
                   placeholder="Your email address"
+                  required
                   class="
                     w-full
                     px-3
@@ -55,7 +63,7 @@
                     focus:ring-sky-400
                     focus:border-sky-300
                     dark:bg-sky-200
-                    dark:text-white
+                    dark:text-dark
                     dark:placeholder-gray-500
                     dark:border-sky-200
                     dark:focus:ring-sky-400
@@ -76,6 +84,7 @@
                   name="password"
                   id="password"
                   placeholder="Your password"
+                  required
                   class="
                     w-full
                     px-3
@@ -88,7 +97,7 @@
                     focus:ring-sky-400
                     focus:border-sky-300
                     dark:bg-sky-200
-                    dark:text-white
+                    dark:text-dark
                     dark:placeholder-gray-500
                     dark:border-sky-200
                     dark:focus:ring-sky-400
@@ -98,7 +107,7 @@
               </div>
               <div class="mb-6">
                 <button
-                  type="button"
+                  type="submit"
                   class="
                     w-full
                     px-3
@@ -111,13 +120,19 @@
                     duration-100
                     ease-in-out
                   "
-                  onclick="window.location='bank.html';"
+                  id="login-btn"
                 >
                   Sign in
                 </button>
               </div>
             </form>
             <!-- seperator -->
+            <div class="flex flex-row justify-center mb-8">
+              <span
+                class="auth-alert absolute font-bold bg-white text-red-500 px-4"
+                >Incorrect email or password. Try again</span
+              >
+            </div>
             <div class="flex flex-row justify-center mb-8">
               <span class="absolute bg-white px-4 text-gray-500"
                 >Enter with this demo account</span
@@ -133,5 +148,6 @@
         </div>
       </div>
     </main>
+    <script src="js/bank.js"></script>
   </body>
 </html>
