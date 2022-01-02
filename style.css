@@ -30,34 +30,49 @@ h1 {
 }
 input {
   width: auto;
-  height: 66px;
+  height: 60px;
   background-color: #bae6ff;
   border: none;
   border-radius: 10px;
+  padding-left: 15px;
+  margin-right: 15px;
 }
 
-.card-input {
-  background-color: #ffffff;
-  max-width: 570px;
-  border-radius: 20px;
+#input-feild {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 100px;
 }
 
-.card-input button {
+#input-feild button {
+  color: #ffffff;
   background-color: #21adfb;
   border: none;
   border-radius: 10px;
   width: 145px;
-  height: 66px;
+  height: 60px;
   text-align: center;
-  cursor: pointer;
   font-weight: bold;
-  color: #ffffff;
 }
-/* .card-input button:hover {
-  background-color: #018bd6;
-} */
-
-.card-input button:active {
+#input-feild button:active {
   box-shadow: 0 2px rgb(204, 204, 204);
   transform: translateY(1px);
+}
+
+.input-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  height: 118px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+@media (max-width: 1200px) {
+  #input-feild {
+    gap: 30px;
+  }
 }

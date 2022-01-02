@@ -17,62 +17,132 @@
   </head>
   <body style="background-color: #21adfb">
     <h1 class="fw-bold text-center text-light my-5">dCash.</h1>
-    <main class="container-fluid my-5">
-      <div class="row d-flex justify-content-center gap-4">
-        <div class="card col-md-4 col-lg-4">
-          <button>Diposit</button>
-          <span class="fw-bold ms-auto p-3">$500.00</span>
-        </div>
-        <div class="card col-md-4 col-lg-4">
-          <button>Withdraw</button>
-          <span class="fw-bold ms-auto p-3 text-danger">$500.00</span>
-        </div>
-        <div class="card col-md-4 col-lg-4">
-          <button>Balance</button>
-          <span class="fw-bold ms-auto p-3">$500.00</span>
-        </div>
-      </div>
-      <section class="my-5">
+    <main class="container my-5">
+      <!-- Display Amount -->
+      <section>
         <div
-          class="d-flex row justify-content-around p-5 gap-3"
-          style="margin-top: 70px"
+          class="
+            row
+            d-flex
+            justify-content-xl-between justify-content-center
+            gap-3
+          "
         >
-          <div class="col-md-4">
-            <h3 class="fw-bold text-light">Diposit</h3>
-            <div
-              class="
-                card-input
-                row
-                justify-content-around
-                align-items-center
-                p-3
-                gap-4
-              "
-            >
-              <input class="col-8" type="text" />
-              <button class="col-4" type="submit">Diposit</button>
-            </div>
+          <div class="card col-md-4 col-lg-4">
+            <button>Diposit</button>
+            <span id="show-diposit" class="fw-bold ms-auto p-3">500.00</span>
           </div>
-          <div class="col-md-4">
-            <h3 class="fw-bold text-light">Withdraw</h3>
-            <div
-              class="
-                card-input
-                row
-                justify-content-around
-                align-items-center
-                p-3
-                gap-4
-              "
+          <div class="card col-md-4 col-lg-4">
+            <button>Withdraw</button>
+            <span id="show-withdraw" class="fw-bold ms-auto p-3 text-danger"
+              >500.00</span
             >
-              <input class="col-8" type="text" />
-              <button class="col-4" type="submit">Withdraw</button>
-            </div>
+          </div>
+          <div class="card col-md-4 col-lg-4">
+            <button>Balance</button>
+            <span id="show-balance" class="fw-bold ms-auto p-3">500.00</span>
           </div>
         </div>
       </section>
+      <!-- Display Amount End -->
+
+      <!-- Amount Input Field start Here -->
+      <section id="input-feild">
+        <div class="flex-fill">
+          <h3 class="fw-bold text-light">Diposit</h3>
+          <div class="input-amount">
+            <input
+              id="diposit-amount"
+              class="flex-fill"
+              type="number"
+              placeholder="Enter Your Amount"
+            />
+            <button type="submit" onclick="getDipositAmount()">Diposit</button>
+          </div>
+        </div>
+        <div class="flex-fill">
+          <h3 class="fw-bold text-light">Withdraw</h3>
+          <div class="input-amount">
+            <input
+              id="withdraw-amount"
+              class="flex-fill"
+              type="number"
+              placeholder="Enter Your Amount"
+            />
+            <button type="submit" onclick="getWithdrawAmount()">
+              Withdraw
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Amount Input Field  End Here-->
     </main>
 
-    <script src="js/bank.js"></script>
+    <!-- Diposit Toast -->
+    <div
+      id="diposit-toast"
+      class="toast position-relative bottom-0 start-50 translate-middle-x"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      data-bs-animation="true"
+    >
+      <div class="d-flex">
+        <div class="toast-body">✅ Your ammount diposit successfully!</div>
+        <button
+          type="button"
+          class="btn-close me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+
+    <!-- Withdraw Toast -->
+    <div
+      id="withdraw-toast"
+      class="toast position-relative bottom-0 start-50 translate-middle-x"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      data-bs-animation="true"
+    >
+      <div class="d-flex">
+        <div class="toast-body">✔️ Your ammount withdraw successfully!</div>
+        <button
+          type="button"
+          class="btn-close me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+
+    <!-- Warning Toast -->
+    <div
+      id="warning-toast"
+      class="toast position-relative bottom-0 start-50 translate-middle-x"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      data-bs-animation="true"
+    >
+      <div class="d-flex">
+        <div class="toast-body">😢 Please input valid amount!</div>
+        <button
+          type="button"
+          class="btn-close me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/bank.js" type="text/javascript"></script>
   </body>
 </html>
