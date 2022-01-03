@@ -82,7 +82,7 @@ input {
 @media (max-width: 1200px) {
   #input-feild {
     gap: 20px;
-    margin-top: 70px;
+    margin-top: 50px;
     padding-bottom: 60px;
   }
   .input-container {
